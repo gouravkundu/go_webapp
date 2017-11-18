@@ -5,6 +5,7 @@ import "bytes"
 type Name string
 
 func (s Name) ToCapitalize() string {
+	// strings.Title() with do the same as the following func implementations
 	if len(s) > 0 {
 		chars := []byte(string(s))
 		start := bytes.ToUpper([]byte{chars[0]})

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Session management</title>
+</head>
+
+<body>
+  <form action="/setuser" method="post">
+    <input type="text" placeholder="email" name="username"><br>
+    <input type="text" placeholder="First Name" name="firstname"><br>
+    <input type="text" placeholder="Last Name" name="lastname"><br>
+    <input type="submit" name="Click here">
+  </form>
+  {{ if .IsValid}}
+  <p>
+    User name: {{ .User_id }}<br> First name: {{ .First_name}}<br> Last name: {{.Last_name}}<br>
+  </p>
+  {{ end }}
+  <br><a href="/getuser">Show user details</a>
+</body>
+
+</html>

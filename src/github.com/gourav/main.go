@@ -12,6 +12,8 @@ import (
 func main() {
 	http.HandleFunc("/", moveToIndex)
 	http.Handle("/fabicon.ico", http.NotFoundHandler())
+	http.HandleFunc("/setuser", controller.Foo)
+	http.HandleFunc("/getuser", controller.Bar)
 	http.HandleFunc("/index", controller.Index)
 	http.HandleFunc("/file", controller.FileFormPosting)
 	http.HandleFunc("/valuepassing", controller.PassingUrlValue)

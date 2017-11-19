@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF=8">
+  <title>Form Parsing</title>
+</head>
+
+<body>
+  <p>This is a form parsing example<br>
+    <form method="post" enctype="multipart/form-data">
+      <input type="text" placeholder="First name" name="fname"><br>
+      <input type="text" placeholder="Last name" name="lname"><br>
+      <input type="file" name="file_struct">
+      <input type="submit">
+    </form>
+  </p>
+  {{ if . }}
+  <p>
+    <h2>Content of the file.</h2>
+    <br> {{ . }}
+  </p>
+  {{ end }}
+</body>
+
+</html>

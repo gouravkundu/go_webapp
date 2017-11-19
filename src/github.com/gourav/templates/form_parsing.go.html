@@ -14,7 +14,7 @@
       <input type="submit">
     </form>
   </p>
-  {{if .IsValid}}
+  {{ if . }} {{if .IsValid}}
   <p>
     First name is: {{.First_name}}
     <br> Last name is: {{.Last_name}}
@@ -24,7 +24,8 @@
   <p>
     Please insert proper names.
   </p>
-  {{ end }}
+  {{ end }} {{ end }}
+
 </body>
 
 </html>
